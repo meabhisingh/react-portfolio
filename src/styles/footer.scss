@@ -1,0 +1,57 @@
+footer {
+  min-height: 100px;
+  background-color: $color6;
+  color: $color4;
+  padding: 6rem 0;
+  padding-left: $p;
+  display: grid;
+  grid-template-columns: 10fr 3fr 1fr;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  > div {
+    width: 100%;
+    border-left: 2px solid $color4;
+    border-right: 2px solid $color4;
+    > img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: contain;
+    }
+
+    > h2 {
+      margin: 1rem;
+    }
+    > p {
+      font: 400 1.2rem $text2;
+    }
+  }
+
+  > aside > article {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    svg {
+      font-size: 2rem;
+      color: $color4;
+      &:hover {
+        color: $color3;
+      }
+    }
+  }
+
+  > a {
+    width: 50px;
+    height: 50px;
+    background-color: $color4;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    svg {
+      font-size: 2rem;
+      color: $color3;
+    }
+  }
+}

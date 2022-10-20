@@ -1,0 +1,78 @@
+#timeline {
+  width: 100%;
+  height: 100vh;
+  background-color: $color1;
+
+  .timelineBox {
+    width: 100%;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 6px;
+      background-color: $color5;
+      top: 0%;
+      bottom: 0%;
+      left: 50%;
+      margin-left: -3px;
+    }
+  }
+
+  .timelineItem {
+    padding: 1rem 3rem;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+
+    &:nth-child(odd) {
+      text-align: right;
+
+      &::after {
+        animation: upanddown 0.3s infinite ease-in alternate;
+      }
+    }
+    &:nth-child(even) {
+      text-align: left;
+      &::after {
+        animation: upanddown 0.5s infinite ease-in alternate;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -17px;
+      background-color: $color1;
+      border: 4px solid $color5;
+      top: 45px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    > div {
+      padding: 20px 30px;
+      background-color: $color5;
+      color: $color1;
+      border-radius: 6px;
+    }
+  }
+
+  .leftTimeline {
+    left: 0%;
+  }
+  .rightTimeline {
+    left: 50%;
+    &::after {
+      left: -16px;
+    }
+  }
+}
